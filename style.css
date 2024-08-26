@@ -1,0 +1,27 @@
+:root {
+  /* Colors */
+  /* Primary */
+  --green-200-lighter: hsl(148, 38%, 91%);
+  --green-600-medium: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  /* Neutral */
+  --grey-500-medium: hsl(186, 15%, 59%);
+  --grey-900-darker: hsl(187, 24%, 22%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla";
+  font-weight: 400;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
