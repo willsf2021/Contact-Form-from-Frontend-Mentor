@@ -161,7 +161,7 @@ textarea:focus {
 #checkbox {
   appearance: none;
   border: 1px solid var(--grey-900-darker);
-  height: 15px;
+  height: 16px;
   width: 16px;
   position: relative;
   display: flex;
