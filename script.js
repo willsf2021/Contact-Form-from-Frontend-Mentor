@@ -9,7 +9,7 @@ let checkBox = document.querySelector("#checkbox");
 let checkBoxError = document.querySelector(".errorMessageConsent");
 let hasError = false;
 
-submitButton.addEventListener("click", (event) => {
+submitButton.addEventListener("click", () => {
   for (let i = 0; i < arrayError.length; i++) {
     if (arrayInputsText[i].value == "") {
       arrayError[i].style.display = "block";
