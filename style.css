@@ -52,6 +52,7 @@ span {
   background-color: none;
   row-gap: 8px;
   font-weight: 500;
+  position: relative;
 }
 
 .firstDatasInput {
@@ -74,6 +75,7 @@ fieldset {
   flex-direction: column;
   border: none;
   row-gap: 16px;
+  position: relative;
 }
 legend {
   margin-bottom: 8px;
@@ -90,6 +92,7 @@ legend {
   padding-left: 24px;
   transition: background-color ease-in-out 200ms;
   font-weight: 700;
+  cursor: pointer;
 }
 .labelRadio:hover {
   border: 1px solid var(--green-600-medium);
@@ -105,6 +108,7 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .radio::before {
@@ -126,12 +130,21 @@ legend {
   border-color: var(--green-600-medium);
 }
 
-#textAreaLabel {
+.textAreaLabel {
   display: flex;
   flex-direction: column;
   row-gap: 8px;
   flex-grow: 1;
   font-weight: 500;
+  position: relative;
+}
+
+.textAreaLabelDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
 }
 textarea {
   border: 1px solid var(--grey-900-darker);
@@ -139,6 +152,7 @@ textarea {
   flex-grow: 1;
   padding: 16px 24px;
   font: 16px "Karla", sans-serif;
+  resize: none;
 }
 
 textarea:hover,
@@ -156,6 +170,7 @@ textarea:focus {
 
 #checkboxLabel > p {
   display: inline;
+  cursor: pointer;
 }
 
 #checkbox {
@@ -173,7 +188,7 @@ textarea:focus {
   content: "";
   position: absolute;
   width: 16px;
-  height: 15px;
+  height: 16px;
   background-color: transparent;
   transition: background-color ease-in-out 200ms;
 }
@@ -195,15 +210,68 @@ button[type="submit"] {
   background-color: var(--green-600-medium);
   height: 40px;
   min-height: 30px;
+  cursor: pointer;
+}
+
+button[type="submit"]:active {
+  background-color: var(--grey-900-darker);
 }
 
 @media (max-height: 760px) {
   form {
     padding: 16px;
     row-gap: 8px;
-    min-height: 600px;
+    min-height: 660px;
   }
   textarea {
     padding: 8px 16px;
   }
+}
+
+.errorMessage {
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  /* display: none; */
+  bottom: -28%;
+  left: 64%;
+  display: none;
+  width: max-content;
+}
+
+.errorMessageEmail {
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  /* display: none; */
+  bottom: -28%;
+  left: 40%;
+  display: none;
+  width: max-content;
+}
+.errorMessageQuery {
+  font-size: 10px;
+  color: red;
+  position: absolute;
+  /* display: none; */
+  bottom: -18%;
+  left: 52%;
+  display: none;
+  width: max-content;
+}
+
+.errorMessageText {
+  font-size: 10px;
+  color: red;
+  position: relative;
+  bottom: -4%;
+  left: 64%;
+  width: max-content;
+  display: none;
+}
+
+.errorMessageConsent {
+  font-size: 10px;
+  color: red;
+  display: none;
 }
