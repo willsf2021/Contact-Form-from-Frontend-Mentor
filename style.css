@@ -1,10 +1,8 @@
 :root {
-  /* Colors */
-  /* Primary */
   --green-200-lighter: hsl(148, 38%, 91%);
   --green-600-medium: hsl(169, 82%, 27%);
+  --green-600-medium-opacity: hsla(169, 82%, 27%, 0.2);
   --red: hsl(0, 66%, 54%);
-  /* Neutral */
   --grey-500-medium: hsl(186, 15%, 59%);
   --grey-900-darker: hsl(187, 24%, 22%);
 }
@@ -13,15 +11,199 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Karla";
-  font-weight: 400;
+  margin: 0px auto;
+  width: 375px;
+  height: 100vh;
+  padding: 32px 24px;
+  background-color: var(--green-200-lighter);
+  font: 400 16px "Karla", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey-900-darker);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+button {
+  font: 700 16px "Karla", sans-serif;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+form {
+  max-height: 900px;
+  min-height: 690px;
+  height: 100%;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+span {
+  color: var(--green-600-medium);
+  font-weight: 700;
+}
+.firstDatas {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: none;
+  row-gap: 8px;
+  font-weight: 500;
+}
+
+.firstDatasInput {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--grey-900-darker);
+  height: 40px;
+  padding-left: 24px;
+  font: 16px "Karla", sans-serif;
+}
+
+.firstDatasInput:focus,
+.firstDatasInput:hover {
+  border-color: var(--green-600-medium);
+  outline: none;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  row-gap: 16px;
+}
+legend {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.labelRadio {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--grey-900-darker);
+  border-radius: 8px;
+  height: 40px;
+  column-gap: 16px;
+  padding-left: 24px;
+  transition: background-color ease-in-out 200ms;
+  font-weight: 700;
+}
+.labelRadio:hover {
+  border: 1px solid var(--green-600-medium);
+}
+.radio {
+  appearance: none;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 2px solid var(--grey-500-medium);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.radio:checked::before {
+  background-color: var(--green-600-medium);
+  transition: background-color ease-in-out 200ms;
+}
+
+.labelRadio:has(.radio:checked) {
+  background-color: var(--green-600-medium-opacity);
+  border-color: var(--green-600-medium);
+}
+
+#textAreaLabel {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  flex-grow: 1;
+  font-weight: 500;
+}
+textarea {
+  border: 1px solid var(--grey-900-darker);
+  border-radius: 8px;
+  flex-grow: 1;
+  padding: 16px 24px;
+  font: 16px "Karla", sans-serif;
+}
+
+textarea:hover,
+textarea:focus {
+  border-color: var(--green-600-medium);
+  outline: none;
+}
+
+#checkboxLabel {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  font-weight: 500;
+}
+
+#checkboxLabel > p {
+  display: inline;
+}
+
+#checkbox {
+  appearance: none;
+  border: 1px solid var(--grey-900-darker);
+  height: 15px;
+  width: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#checkbox:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  background-color: transparent;
+  transition: background-color ease-in-out 200ms;
+}
+
+#checkbox:checked::before {
+  background-color: var(--green-600-medium);
+}
+#checkbox:checked::after {
+  content: "✔"; /* Símbolo de checkmark */
+  color: white; /* Cor do checkmark */
+  font-size: 10px; /* Tamanho do checkmark */
+  position: absolute;
+}
+
+button[type="submit"] {
+  color: white;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--green-600-medium);
+  height: 40px;
+  min-height: 30px;
+}
+
+@media (max-height: 760px) {
+  form {
+    padding: 16px;
+    row-gap: 8px;
+    min-height: 600px;
+  }
+  textarea {
+    padding: 8px 16px;
+  }
 }
