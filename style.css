@@ -17,7 +17,9 @@ body {
   margin: 0 auto;
   width: 375px;
   height: 100vh;
-  padding: 32px 24px;
+  padding-top: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
   background-color: var(--green-200-lighter);
   font: 400 16px "Karla", sans-serif;
   display: flex;
@@ -290,4 +292,17 @@ dialog {
   align-items: center;
   column-gap: 8px;
   margin-bottom: 8px;
+}
+
+footer {
+  margin-top: 4px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--grey-900-darker);
+}
+
+footer a {
+  font-weight: 700;
+  color: var(--grey-900-darker);
+  text-decoration: none;
 }
