@@ -197,9 +197,9 @@ textarea:focus {
   background-color: var(--green-600-medium);
 }
 #checkbox:checked::after {
-  content: "✔"; /* Símbolo de checkmark */
-  color: white; /* Cor do checkmark */
-  font-size: 10px; /* Tamanho do checkmark */
+  content: "✔";
+  color: white;
+  font-size: 10px;
   position: absolute;
 }
 
@@ -274,4 +274,25 @@ button[type="submit"]:active {
   font-size: 10px;
   color: red;
   display: none;
+}
+
+dialog {
+  border: none;
+  border-radius: 16px;
+  background-color: var(--grey-900-darker);
+  padding: 16px;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  width: 327px;
+  margin: 0 auto;
+}
+
+#messageSent {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 8px;
 }
